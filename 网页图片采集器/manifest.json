@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "网页图片采集器",
+  "description": "提取当前网页图片并保存到下载文件夹。",
+  "version": "1.0.6",
+  "permissions": ["activeTab", "downloads", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "网页图片采集器",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>网页图片采集器</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>网页图片采集器</h1>
+        <p>扫描当前网页，尽量保存原图。</p>
+      </header>
+
+      <section class="panel">
+        <label class="check">
+          <input id="includeBackgrounds" type="checkbox" checked>
+          <span>包含背景图</span>
+        </label>
+
+        <label class="field">
+          <span>最小图片宽度</span>
+          <select id="minWidth">
+            <option value="0">不限</option>
+            <option value="120">120 像素</option>
+            <option value="300" selected>300 像素</option>
+          </select>
+        </label>
+
+        <button id="start" type="button">开始保存图片</button>
+      </section>
+
+      <p id="status" class="status">图片会保存到下载文件夹的新子文件夹。</p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

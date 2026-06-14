@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "网站深扫插件",
+  "description": "在 Discuz 目录页显示帖子首图，并用弹窗打开详情页。",
+  "version": "1.0.2",
+  "permissions": ["storage"],
+  "host_permissions": ["https://bbs.fuyuan6.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://bbs.fuyuan6.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

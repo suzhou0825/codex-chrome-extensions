@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "长页捕获工具",
+  "description": "自动滚动网页并保存长截图或多页 PDF。",
+  "version": "1.0.2",
+  "permissions": ["activeTab", "downloads", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "长页捕获工具",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

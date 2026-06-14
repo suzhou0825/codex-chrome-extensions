@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>长页捕获工具</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>长页捕获工具</h1>
+        <p>自动滚动当前网页并保存到下载文件夹。</p>
+      </header>
+
+      <section class="panel">
+        <label class="field">
+          <span>保存格式</span>
+          <select id="format">
+            <option value="png">长截图 PNG</option>
+            <option value="pdf">多页 PDF</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>图片拆分高度</span>
+          <select id="chunkHeight">
+            <option value="24000">自动，最长 24000 像素</option>
+            <option value="16000">较小，最长 16000 像素</option>
+            <option value="30000">较大，最长 30000 像素</option>
+          </select>
+        </label>
+
+        <button id="start" type="button">开始捕获</button>
+      </section>
+
+      <p id="status" class="status">请选择保存方式。</p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+.fy-thread-thumb {
+  float: left;
+  display: inline-flex;
+  width: 96px;
+  height: 72px;
+  margin: 0 10px 6px 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  background: #f5f5f5;
+  color: #888;
+  font-size: 12px;
+  line-height: 1.3;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.fy-thread-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fy-thread-thumb.is-loading::after {
+  content: "加载首图";
+}
+
+.fy-thread-thumb.is-empty::after {
+  content: "无首图";
+}
+
+.fy-thread-thumb.is-error::after {
+  content: "加载失败";
+}
+
+#threadlisttableid tbody[id^="normalthread_"] th,
+#threadlisttableid tbody[id^="stickthread_"] th {
+  min-height: 78px;
+}
+
+.fy-popup-lock {
+  overflow: hidden !important;
+}
+
+.fy-detail-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  display: none;
+  color: #222;
+  font-size: 14px;
+}
+
+.fy-detail-popup.is-open {
+  display: block;
+}
+
+.fy-detail-popup-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.fy-detail-popup-panel {
+  position: absolute;
+  top: 6vh;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  width: min(1180px, calc(100vw - 96px));
+  height: min(820px, calc(100vh - 96px));
+  overflow: hidden;
+  border: 1px solid #bfbfbf;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+  transform: translateX(-50%);
+}
+
+.fy-detail-popup-header {
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 10px 0 14px;
+  border-bottom: 1px solid #d8d8d8;
+  background: #f7f7f7;
+  box-sizing: border-box;
+}
+
+.fy-detail-popup-title {
+  min-width: 0;
+  overflow: hidden;
+  color: #222;
+  font-size: 14px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fy-detail-popup-actions {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.fy-detail-popup-open {
+  color: #2367b1 !important;
+  font-size: 12px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.fy-detail-popup-open:hover {
+  text-decoration: underline;
+}
+
+.fy-detail-popup-close {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid #c8c8c8;
+  border-radius: 4px;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.fy-detail-popup-close:hover {
+  background: #eee;
+}
+
+.fy-detail-popup-loading {
+  position: absolute;
+  top: 54px;
+  left: 50%;
+  z-index: 1;
+  display: none;
+  padding: 7px 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  background: #fff;
+  color: #666;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.fy-detail-popup.is-loading .fy-detail-popup-loading {
+  display: block;
+}
+
+.fy-detail-popup-frame {
+  width: 100%;
+  flex: 1 1 auto;
+  border: 0;
+  background: #fff;
+}
+
+@media (max-width: 760px) {
+  .fy-detail-popup-panel {
+    top: 12px;
+    width: calc(100vw - 24px);
+    height: calc(100vh - 24px);
+  }
+
+  .fy-detail-popup-header {
+    min-height: 46px;
+  }
+}
